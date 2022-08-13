@@ -4,6 +4,8 @@
 #include <inttypes.h>
 #include "nyx.h"
 
+#define PAYLOAD_SIZE 64
+
 /* this is our "bitmap" that is later shared with the fuzzer (you can also pass the pointer of the bitmap used by compile-time instrumentations in your target) */ 
 uint8_t* trace_buffer[64*1024] = {0};
 
