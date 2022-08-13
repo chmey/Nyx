@@ -26,6 +26,7 @@ int main(int argc, char** argv){
 	memset(trace_buffer, 0, 64*1024); // makes sure that the bitmap buffer is already mapped into the guest's memory (alternatively you can use mlock) */
 	agent_config_t agent_config = {0};
 	agent_config.agent_magic = NYX_AGENT_MAGIC;
+	agent_config.agent_version = NYX_AGENT_VERSION;
 	agent_config.agent_timeout_detection = 0; 								/* timeout detection is implemented by the agent (currently not used) */
 	agent_config.agent_tracing = 1;											/* set this flag to propagade that instrumentation-based fuzzing is availabe */
 	agent_config.agent_ijon_tracing = 0; 									/* set this flag to propagade that IJON extension is implmented agent-wise */
